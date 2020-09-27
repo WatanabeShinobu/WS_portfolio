@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* ががちゃいサイトのデザイン */
+body {
+    margin: 0;
+    background-color: #eee;
+
+}
+
+header {
+    background-color: coral;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 5px 3px 3px gold;
+	animation-name: move;
+    animation-duration: 10s;
+	animation-delay:1.5s;
+    animation-iteration-count:infinite;
+}
+
+.container {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.icon {
+    margin-right:auto;
+}
+
+.text {
+    flex-direction: column;
+}
+
+.text > h1 {
+    font-size: 27px;
+}
+
+.sp-menu {
+    margin-left: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+.sp-menu #open {
+    font-size: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.sp-menu #open.hide {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    padding: 64px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+}
+
+.overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay #close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.overlay ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay li {
+    margin-top: 24px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .3s, transform .3s;
+}
+
+.overlay li a {
+    text-decoration: none;
+}
+
+.overlay li a:hover {
+    opacity: .5;
+}
+
+.overlay.show li {
+opacity: 1;
+transform: none;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav ul {
+    display: inline-block;
+    width: 1440px;
+    overflow: hidden;
+    padding-right: 0;
+}
+
+#nav ul li {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 165, 0);
+    border: 2px solid #333;
+    border-radius: 5px;
+    list-style: none;
+    float: left;
+    justify-content: space-between;
+    transition: all 1s ease-in-out;
+    transition-delay: 0s;
+    text-align: center;
+}
+
+#nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+#nav li:hover {
+    opacity: .5;
+}
+
+.box {
+    background-color: coral;
+}
+
+.box h1 {
+    margin: 0;
+}
+
+@keyframes move {
+    0% { 
+        background: #f77103;
+    }
+    20% { 
+        background: rgb(245, 163, 69);
+    }
+    40% { 
+        background: rgb(252, 236, 15);
+    }
+    60% {
+        background: rgb(235, 4, 4);
+    }
+    100% {
+        background: rgb(255, 94, 0);
+    }
+}
+
+.home {
+    border: 3px solid gray;
+    padding: 2px 10px;
+    text-decoration: none;
+    background-color: royalblue;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.home:hover {
+    opacity: .5;
+}
+
+footer {
+    text-align: center;
+}
